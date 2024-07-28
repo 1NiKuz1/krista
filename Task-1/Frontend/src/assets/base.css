@@ -1,0 +1,39 @@
+:root {
+  --color-dark: #181818;
+  --color-light: #ffffff;
+  --color-background-table: var(--color-light);
+  --color-text-table: var(--color-dark);
+  --color-devider: #e2e2e2;
+  --color-accent: rgb(26, 7, 112);
+  --color-dark-accent: rgb(17, 4, 71);
+  --color-light-accent: rgb(35, 4, 170);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-light);
+  background: var(--color-dark);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Roboto, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

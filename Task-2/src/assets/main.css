@@ -1,0 +1,12 @@
+@import "./base.css";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+#app {
+  max-width: 2020px;
+  margin: 0 auto;
+  padding: 48px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
