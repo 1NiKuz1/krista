@@ -47,5 +47,6 @@ COMMIT;
 Для запуска проекта выполните команду:
 
 ```sh
+npm install
 npm run dev
 ```

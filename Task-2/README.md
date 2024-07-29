@@ -21,5 +21,6 @@ http://www.highcharts.com/demo/ или любой другой.
 Для запуска проекта используйте команду:
 
 ```sh
+npm install
 npm run dev
 ```
