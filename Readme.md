@@ -31,7 +31,7 @@ http://www.highcharts.com/demo/ или любой другой.
 
 В любом онлайн редакторе SQL например (https://sqliteonline.com/) выполнить скрипт
 
-```sh
+```sql
 --DROP TABLE Department;
 --DROP TABLE Employee;
 

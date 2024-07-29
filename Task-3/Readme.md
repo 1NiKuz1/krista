@@ -2,7 +2,7 @@
 
 В любом онлайн редакторе SQL например (https://sqliteonline.com/) выполнить скрипт
 
-```sh
+```sql
 --DROP TABLE Department;
 --DROP TABLE Employee;
 
@@ -69,7 +69,7 @@ VALUES (34, 4, null, "Dilan", 60000);
 
 Вывести список сотрудников, получающих заработную плату большую чем у непосредственного руководителя
 
-```sh
+```sql
 SELECT E2.ID, D.NAME AS 'Департамент', E1.NAME AS 'Имя руководителя', E1.SALARY AS 'Зарплата руководителя',
 E2.NAME AS 'Имя сотрудника', E2.SALARY  AS 'Зарплата сотрудника'
 FROM Employee as E1
@@ -81,7 +81,7 @@ ON E1.DEPARTMENT_ID = D.ID
 
 Вывести список сотрудников, получающих максимальную заработную плату в своем отделе
 
-```sh
+```sql
 WITH MAX_SALARIES AS (
     SELECT DEPARTMENT_ID, MAX(SALARY) AS MaxSalary
     FROM Employee
@@ -97,7 +97,7 @@ ON E.DEPARTMENT_ID = D.ID
 
 Вывести список ID отделов, количество сотрудников в которых не превышает 3 человек
 
-```sh
+```sql
 SELECT E.DEPARTMENT_ID, COUNT(E.NAME) AS 'Количество человек'
 FROM Employee AS E
 GROUP BY E.DEPARTMENT_ID
@@ -106,7 +106,7 @@ HAVING COUNT(E.NAME) <= 3
 
 Вывести список сотрудников, не имеющих назначенного руководителя, работающего в том-же отделе
 
-```sh
+```sql
 SELECT *
 FROM Employee as E
 WHERE E.DEPARTMENT_ID NOT IN (
@@ -119,7 +119,7 @@ WHERE E.DEPARTMENT_ID NOT IN (
 
 Найти список ID отделов с максимальной суммарной зарплатой сотрудников
 
-```sh
+```sql
 WITH DEPARTAMENT_SUM_SALARIES AS (
 	SELECT E.DEPARTMENT_ID, SUM(E.SALARY) AS SUM_SALARY
 	FROM Employee as E
